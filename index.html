@@ -4,10 +4,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" >
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- include a pretty font -->
   <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Montserrat">
 
-
+  <!-- include the scripts needed for js9 -->
   <link type="image/x-icon" rel="shortcut icon" href="https://js9.si.edu/js9/favicon.ico">
   <script type="text/javascript" src="js9prefs-sbo.js"></script>
   <link type="text/css" rel="stylesheet" href="https://js9.si.edu/js9/js9support.css">
@@ -21,39 +22,65 @@
 
   <style type="text/css">
     .ImexamContainer .JS9PluginContainer {
-      border: 0px solid grey;
+      border: 0px solid black;
+    }
+    h1, p {
+      font-family: 'Montserrat';
+
+    }
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    table, th, td {
+      border: 0px solid black;
+      border-collapse: separate;
+      border-spacing: 0 0;
     }
   </style>
-  <title>ASTR1030 | image-analyzing tool</title>
+  <title>ASTR1030 Astronomical Image Viewer</title>
 
 
 </head>
 <body>
-    <table cellspacing="30">
+    <table cellspacing="30" class='center'>
+      <tr>
+       <td align="center" valign="bottom">
+         <h1 fontface='Montserrat'>ASTR1030 Astronomical Image Viewer</h1>
 
-
-    <tr valign="top">
-    <td>
-    <div class="JS9Menubar" id="JS9Menubar" data-style="mac" data-usermenus="true"></div>
-    <div class="JS9" id="JS9"></div>
-    <div class="JS9Colorbar"></div>
-
-
-    </td>
-    <td>
-    <div class="ImexamContainer">
-    <table>
-    <tr><td><div class="ImExamRegionStats" data-js9id="JS9"></div></td>
-        <td><div class="" data-js9id="JS9"></div></td></tr>
-    <tr><td><div class="" data-js9id="JS9"></div></td>
-        <td><div class="" data-js9id="JS9"></div></td></tr>
+       </td>
+      </tr>
+      <tr valign="top" >
+        <td>
+          <div class="JS9Menubar" id="JS9Menubar" data-style="mac" data-usermenus="true" data-width="838px"></div>
+          <div class="JS9" id="JS9" data-width="838px" data-height="633px"></div>
+          <div class="JS9Colorbar" data-width="838px"></div>
+        </td>
+        <td valign="top" align="left">
+            <div class="ImExamRegionStats" data-js9id="JS9"></div>
+        </td>
+      </tr>
+      <tr>
+        <td width=838px>
+          <br><br>
+          <a name="help"/>
+          <p><b>How do I connect for observing?</b> If you are an ASTR1030 student, visit the <a href=https://canvas.colorado.edu/courses/64272/pages/telescope-observing-at-sbo target='_blank'>Canvas Observing Page</a> for the zoom link.</p>
+          <p><b>How do I download my data?</b> If you are an ASTR1030 student, visit the <a href=https://drive.google.com/drive/folders/1c8fCI-N7p68jfvovlhgj50k5TRR4eouz?usp=sharing target='_blank'>ASTR1030 Data Archive</a> and browse to the correct directory for your telescope and observing night.</p>
+          <p><b>How do I load an image?</b> Drag an image file (.fit, .fits, or any other image file format) from your computer into the main viewer window. Or, use the "File" button.</p>
+          <p><b>How do I navigate around the image?</b> To change the zoom scale, use the "Zoom" button or press "+/-" on your keyboard. To recenter, either <i>control-click</i> (Mac) or <i>right-click</i> (Windows) with your mouse.</p>
+          <p><b>How do I see fainter or brighter things?</b> Your image is a recording of "how much light hit this pixel," and you may someimes want to focus on specific ranges of brightness. <i>Click and drag</i> (up, down, left, right) on the image to change the mapping between recorded brightness and the color shown; watch the colorbar at the bottom to see how recorded brightness is being portrayed as color. Use the "Color Scale" button to switch between linear and logarithmic color. Use the ombré button to select a different set of colors to use entirely.</p>
+          <p><b>How do I measure positions?</b> The three numbers in the upper left of the image are (1) how bright is this pixel, (2) the x-location of this pixel, and (3) the y-location of the pixel. See how they respond as you move your cursor with your mouse or the arrow keys.</p>
+          <p><b>How do I measure the brightness of an object?</b> Use the little circle button at the top to create Region on the image. Move, stretch, rotate that region until it encompasses an object. The "Region Stats" box provides statistcs for that region, including the total of all the brightness values within the region ("totcounts") and that total but background-subtracted to try to remove the brightness associated with the sky ("bscounts").
+          </p>
+          <br>
+        </td>
+      </tr>
+      <tr>
+      <td width=838px><p><small>This page was assembled by Zach Berta-Thompson for the Fall 2020 semester of ASTR1030 at the University of Colorado Boulder. The viewer relies 100% on the wonderful work done by the <a href=https://js9.si.edu target="_blank">js9</a> project, which is a browser-based version of the original <a href=https://ds9.si.edu target="_blank">ds9</a> astronomical image viewer.</small></p></td>
+      </tr>
     </table>
-    </div>
-    </td>
-    </tr>
 
-
-    </table>
 
 </body>
 </html>
